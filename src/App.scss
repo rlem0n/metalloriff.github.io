@@ -1,0 +1,185 @@
+@import "./Variables.scss";
+
+:root {
+	--primary-color: #8fbcbb;
+	--secondary-color: #88c0d0;
+	
+	--primary-bg: #2e3440;
+	--secondary-bg: #3b4252;
+	--tertiary-bg: #434c5e;
+	
+	--primary-border-radius: 4px;
+	--secondary-border-radius: 7px;
+}
+
+html {
+	background-color: $primaryBG;
+	color: white;
+
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+	sans-serif;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	margin: 0;
+	color: darken(white, 12%);
+	overflow-x: hidden;
+}
+
+// I hate Firefox
+* {
+	scrollbar-width: thin;
+	scrollbar-color: $primaryColor rgba(black, 0.1);
+}
+
+.App, .Main {
+	min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+	background: rgba(black, 0.1);
+	width: 5px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $primaryColor;
+	border-radius: $primaryBorderRadius;
+}
+
+footer {
+	background-color: $tertiaryBG;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	padding: 10px;
+	
+	box-shadow: 0 0 15px rgba(black, 0.1);
+	transform: translate(0); // wow CSS is a dog shit language
+	
+	> .Divider {
+		width: 2px;
+		height: 1.5em;
+		
+		border-radius: 2px;
+		margin: 0 10px;
+		
+		background-color: $primaryHover;
+	}
+}
+
+a {
+	color: $primaryColor;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.WaveVector {
+	position: fixed;
+	
+	width: 200vw;
+	height: 100vh;
+	margin-bottom: -20px;
+
+	will-change: transform;
+
+	animation-name: WaveVectorAnim;
+	animation-duration: 8s;
+	animation-timing-function: steps(160);
+	animation-iteration-count: infinite;
+
+	&.Reverse {
+		animation-direction: reverse;
+		animation-duration: 12s;
+
+		z-index: -1;
+		margin-top: -15vh;
+	}
+}
+
+@keyframes WaveVectorAnim {
+	100% {
+		transform: translateX(-100vw);
+	}
+}
+
+.ButtonsContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 2.5em;
+
+	margin-top: -12.5vh;
+	margin-bottom: 15vh;
+
+	transition: opacity 300ms ease-out, transform 300ms ease-out;
+	opacity: 0;
+	transform: scale(0.5);
+	transform-origin: bottom;
+
+	.Divider {
+		width: 3px;
+		height: 1em;
+		border-radius: 3px;
+
+		margin: 0 20px;
+
+		background-color: $primaryHover;
+	}
+
+	.Button {
+		margin: 15px;
+		border-radius: $primaryBorderRadius;
+
+		cursor: pointer;
+
+		.TooltipContainer {
+			font-size: 0.35em;
+			font-weight: bolder;
+		}
+
+		transition: transform $ft;
+
+		&:Hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+#root .Mobile {
+	font-size: 0.75em;
+	
+	.ButtonsContainer {
+		.Divider {
+			margin: 0;
+		}
+	}
+	
+	.MainPage .Head p:Not(:First-Child) {
+		margin-bottom: 2em;
+	}
+	
+	footer {
+		flex-direction: column;
+		font-size: 1.25em;
+		
+		> * {
+			margin: 6px 0;
+		}
+		
+		.Divider {
+			display: none;
+		}
+	}
+}

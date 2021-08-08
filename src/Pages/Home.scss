@@ -1,0 +1,53 @@
+@import "../Variables.scss";
+
+.MainPage {
+  position: relative;
+  
+  .Head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 20vh 5vw;
+    text-align: center;
+    
+    > p {
+      font-size: 2.5em;
+      font-weight: bolder;
+      margin: 0.2em;
+      
+      transform: scale(1.2);
+      opacity: 0;
+      
+      animation-name: TextSpawnAnim;
+      animation-duration: 700ms;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      
+      &:Nth-Child(1) { animation-delay: 500ms; font-size: 3.5em; }
+      &:Nth-Child(2) { animation-delay: 1500ms; margin-bottom: 2em; font-size: 3.5em; }
+      &:Nth-Child(3) { animation-delay: 3s; }
+      &:Nth-Child(4) { animation-delay: 4s; margin-bottom: 2em; }
+      &:Nth-Child(5) { animation-delay: 5s; margin-bottom: 2em; }
+      
+      // kek
+      &:Nth-Child(6) { animation-delay: 10s; font-size: 5rem; font-family: sans-serif; }
+      
+      > b {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+@keyframes TextSpawnAnim {
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.Mobile .MainPage {
+	
+}
