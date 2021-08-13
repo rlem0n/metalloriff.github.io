@@ -29,10 +29,8 @@
       &:Nth-Child(2) { animation-delay: 1500ms; margin-bottom: 2em; font-size: 3.5em; }
       &:Nth-Child(3) { animation-delay: 3s; }
       &:Nth-Child(4) { animation-delay: 4s; margin-bottom: 2em; }
-      &:Nth-Child(5) { animation-delay: 5s; margin-bottom: 2em; }
-      
-      // kek
-      &:Nth-Child(6) { animation-delay: 10s; font-size: 5rem; font-family: sans-serif; }
+      &:Nth-Child(5) { animation-delay: 5s; }
+      &:Nth-Child(6) { animation-delay: 6s; margin-bottom: 2em; }
       
       > b {
         color: $primaryColor;
@@ -40,6 +38,9 @@
     }
   }
 }
+
+// kek
+.Kek .Head > p:Nth-Child(6) { animation-delay: 10s; font-size: 5rem; font-family: sans-serif; }
 
 @keyframes TextSpawnAnim {
   100% {

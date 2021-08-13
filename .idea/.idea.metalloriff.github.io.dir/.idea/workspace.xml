@@ -10,6 +10,9 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/.gitignore" />
+      <option value="$PROJECT_DIR$/src/Pages/EasterEggKek.js" />
+      <option value="$PROJECT_DIR$/src/Pages/Home.scss" />
+      <option value="$PROJECT_DIR$/src/Pages/Home.js" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1wSx9woEc5jQWd2qVapBNWalKuL" />
@@ -21,6 +24,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -33,14 +40,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628465646259</updated>
-      <workItem from="1628465650090" duration="729000" />
+      <workItem from="1628465650090" duration="1325000" />
+      <workItem from="1628866319289" duration="814000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

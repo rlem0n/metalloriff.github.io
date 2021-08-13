@@ -1,8 +1,14 @@
 import React from "react";
 import "./Home.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faEnvelope, faEnvelopeOpen, faProjectDiagram } from "@fortawesome/free-solid-svg-icons";
-import { faDiscord, faGithub, faGuilded } from "@fortawesome/free-brands-svg-icons";
+import {
+    faChevronDown,
+    faEnvelope,
+    faEnvelopeOpen,
+    faHeart,
+    faProjectDiagram
+} from "@fortawesome/free-solid-svg-icons";
+import { faDiscord, faGithub, faGuilded, faPaypal } from "@fortawesome/free-brands-svg-icons";
 import Tooltip from "../Components/Tooltip";
 import LinkWrapper from "../Components/LinkWrapper";
 import { copyToClipboard } from "../Components/Modals";
@@ -58,6 +64,7 @@ export default class extends React.Component {
                     <p>I'm a hobby/freelance <b>web</b>, <b>software</b>, and <b>game</b> developer.</p>
                     <p>Fluent with <b>C#</b>, <b>JavaScript</b>, <b>ReactJS</b>, <b>CSS/SCSS</b>, <b>Unity Engine</b>, <b>HTML</b>, and <b>LUA</b>.</p>
                     <p>I also work with <b>Java</b>, <b>Python</b>, <b>3D modeling</b>, <b>3D animation</b>, and <b>vector art design</b>.</p>
+                    <p>You can view my projects <a href="#projects">here</a>!</p>
                 </div>
                 
                 <div className="ButtonsContainer" ref={this.buttonsContainerRef}>
@@ -88,13 +95,15 @@ export default class extends React.Component {
                             <Tooltip>My Guilded - Guilded.gg/Metalloriff</Tooltip>
                         </div>
                     </LinkWrapper>
-
-                    <div className="Divider"/>
                     
-                    <div className="Button">
-                        <FontAwesomeIcon icon={faEnvelope} style={{ opacity: 0.5 }}/>
-                        <Tooltip>Not yet added - you can contact me with any of the links to the left</Tooltip>
-                    </div>
+                    <div className="Divider"/>
+
+                    <LinkWrapper href="https://paypal.me/israelboone">
+                        <div className="Button">
+                            <FontAwesomeIcon icon={faPaypal}/>
+                            <Tooltip>♥ Donate ♥</Tooltip>
+                        </div>
+                    </LinkWrapper>
                 </div>
             </div>
         );

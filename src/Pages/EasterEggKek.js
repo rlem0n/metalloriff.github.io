@@ -2,7 +2,7 @@
 
 export default function KekW() {
     return (
-        <div className="MainPage">
+        <div className="MainPage Kek">
             <div className="Head">
                 <p>Hi,</p>
                 <p>My name is Reggie!</p>
